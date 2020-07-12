@@ -4,7 +4,7 @@
 }
 
 :root {
-    --smile: 0;
+    --joy: 0;
     --sad: 0;
     --angry: 0;
     --disgust: 0;
@@ -36,7 +36,7 @@ input[type="range"] {
 
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    background: #53aeff;
+    background: #636363;
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -123,7 +123,7 @@ h1 {
 #emoji {
     font-size: 34.0vw;
     font-family: "emotion";
-    font-variation-settings: 'SMIL'var(--smile), 'SAAD'var(--sad), 'ANGR'var(--angry), 'SPRS'var(--surprise), 'DGST'var(--disgust), 'FEAR'var(--fear);
+    font-variation-settings: 'JOYY'var(--joy), 'SADD'var(--sad), 'ANGR'var(--angry), 'SPRS'var(--surprise), 'DGST'var(--disgust), 'FEAR'var(--fear);
     color: #e6c81e;
 }
 
