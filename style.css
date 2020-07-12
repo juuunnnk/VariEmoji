@@ -1,0 +1,149 @@
+@font-face {
+    font-family: "emotion";
+    src: url(font/variemojiGX.woff2) format("woff2-variations");
+}
+
+:root {
+    --smile: 0;
+    --sad: 0;
+    --angry: 0;
+    --disgust: 0;
+    --fear: 0;
+    --surprise: 0;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+    height: 20px;
+    width: 100%;
+    background: #cecece;
+    border-radius: 20px;
+    border: solid 3px #dff1ff;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #53aeff;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+.container {
+    display: flex;
+    align-self: stretch;
+    width: 100%;
+    margin: 0;
+}
+
+.main {
+    margin: 40px;
+    margin-bottom: 0;
+    width: 40%;
+}
+
+.desq {
+    margin-bottom: 40px;
+
+}
+
+.colors {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.color {
+    margin-right: 20px;
+}
+
+.box-controls {
+    font-size: 20px;
+    display: flex;
+    color: #000;
+    font-weight: bold;
+    vertical-align: middle;
+    flex-direction: column;
+}
+
+.box-controls span {
+    font-size: 20px;
+}
+
+.control {
+    margin-bottom: 40px;
+}
+
+.slider-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider-info p {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.slider-info span {
+    font-size: 24px;
+    font-style: italic;
+}
+
+#box-emoji {
+    width: 50%;
+    height: 100vh;
+    background-color: #8f8f8f;
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 8vw;
+
+}
+
+#box-emoji p {
+    margin: 0px;
+
+}
+
+#emoji {
+    font-size: 34.0vw;
+    font-family: "emotion";
+    font-variation-settings: 'SMIL'var(--smile), 'SAAD'var(--sad), 'ANGR'var(--angry), 'SPRS'var(--surprise), 'wght'var(--disgust), 'FEAR'var(--fear);
+    color: #e6c81e;
+}
+
+@media screen and (max-width:640px) {
+    .container {
+        position: relative;
+        display: block;
+    }
+
+
+    #box-emoji {
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+        height: 50vw;
+    }
+
+    .main {
+        position: absolute;
+        top: 55vw;
+        width: 80%;
+    }
+}
