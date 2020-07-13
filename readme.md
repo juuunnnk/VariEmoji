@@ -12,6 +12,6 @@ https://juuunnnk.github.io/VariEmoji/
 - Angry `ANGR` 0 ~ 900
 - Surprise `SPRS` 0 ~ 900
 - Disgust `DGST` 0 ~ 900
-- Fear `fear` 0 ~ 900
+- Fear `FEAR` 0 ~ 900
 
 ![guide](https://raw.githubusercontent.com/juuunnnk/VariEmoji/images/guide.gif)
