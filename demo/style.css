@@ -16,9 +16,14 @@
     margin: 0;
 }
 
+
 body {
     box-sizing: border-box;
-    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    font-family: 'Muli', "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+input {
+    font-size: 16px;
 }
 
 
@@ -27,7 +32,7 @@ input[type="range"] {
     appearance: none;
     cursor: pointer;
     outline: none;
-    height: 20px;
+    height: 10px;
     width: 100%;
     background: #cecece;
     border-radius: 20px;
@@ -44,6 +49,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 h1 {
     font-size: 48px;
+    font-weight: bold;
 }
 
 .container {
@@ -55,7 +61,7 @@ h1 {
 
 .main {
     margin: 40px;
-    margin-bottom: 0;
+    margin-bottom: 60px;
     width: 40%;
 }
 
@@ -63,13 +69,31 @@ h1 {
     margin-bottom: 40px;
 
 }
-
-.colors {
+.share-box {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.share-box a {
+    color: #000;
+    margin-left: 5px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: 40px;
 }
 
+#resetBtn {
+    font-size: 20px;
+}
+
 .color {
+    display: flex;
     margin-right: 20px;
 }
 
@@ -90,24 +114,25 @@ h1 {
     margin-bottom: 40px;
 }
 
+#form-name span {
+    font-size: 16px;
+    margin-left: 5px;
+    color: #777777;;
+}
+
 .slider-info {
     display: flex;
+    font-size: 24px;
     justify-content: space-between;
 }
 
 .slider-info p {
-    font-size: 24px;
     margin-bottom: 5px;
 }
 
-.slider-info span {
-    font-size: 24px;
-    font-style: italic;
-}
 
 #box-emoji {
     width: 50%;
-    height: 100vh;
     background-color: #8f8f8f;
     vertical-align: middle;
     text-align: center;
@@ -117,7 +142,6 @@ h1 {
 
 #box-emoji p {
     margin: 0px;
-
 }
 
 #emoji {
@@ -128,11 +152,31 @@ h1 {
 }
 
 @media screen and (max-width:640px) {
+    input[type="range"] {
+
+        height: 10px;
+        width: 100%;
+        background: #cecece;
+        border-radius: 20px;
+        border: solid 3px #dff1ff;
+    }
+    
+    .control {
+        margin-bottom: 20px;
+    }
+
+    .desq h1 {
+        font-size: 32px;
+    }
+
+    .desq p {
+        font-size: 16px;
+    }
+
     .container {
         position: relative;
         display: block;
     }
-
 
     #box-emoji {
         position: fixed;
@@ -144,6 +188,13 @@ h1 {
     .main {
         position: absolute;
         top: 55vw;
-        width: 80%;
+        width: 85%;
+        margin: 20px;
+        margin-top: 40px;
+    }
+
+    .slider-info {
+        font-size: 16px;
+        margin-bottom: 5px;
     }
 }

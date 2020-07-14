@@ -8,8 +8,14 @@
     <meta name="description" content="感情にあわせて自由に表情を作れる絵文字">
     <meta property="og:title" content="VariEmoji" />
     <meta property="og:description" content="感情にあわせて自由に表情を作れる絵文字" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@juuunnnk" />
     <meta property="og:image" content="https://juuunnnk.github.io/VariEmoji/images/og.png"" />
+    <link rel=" icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel=" stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -22,20 +28,30 @@
                 <h1>VariEmoji</h1>
                 <p>感情にあわせて自由に表情を作れる絵文字</p>
             </div>
+            <div class="share-box">
+                <p>この表情をシェア</p>
+                <div class="share-links">
+                    <a class="shareBtn" id="twitter" href="" target="_blank">Twitter</a>
+                    <a class="shareBtn" id="facebook" href="" target="_blank">facebook</a>
+                    <a class="shareBtn" id="line" href="" target="_blank">LINE</a>
+                </div>
+            </div>
             <div class="box-controls">
-                <div class="colors">
+                <div class="buttons">
                     <div class="color">
-                        <p>Emoji</p>
+                        <p>Emoji：</p>
                         <input type="color" name="emoji" id="emocolor" value="#e6c81e">
                     </div>
                     <div class="color">
-                        <p>Background</p>
+                        <p>Background：</p>
                         <input type="color" name="emoji" id="bgcolor" value="#8f8f8f">
                     </div>
+                    <div><button id="resetBtn">Reset</button></div>
+
                 </div>
                 <div class="control">
                     <div class="slider-info">
-                        <p id="form-name">喜び</p>
+                        <p id="form-name">JOY<span>喜び</span></p>
                         <span class="value" data-index="1"></span>
                     </div>
                     <input type="range" min="000" max="500" value="000" step="10" class="slider" id="joy"
@@ -43,7 +59,7 @@
                 </div>
                 <div class="control">
                     <div class="slider-info">
-                        <p id="form-name">悲しみ</p>
+                        <p id="form-name">Sad<span>悲しみ</span></p>
                         <span class="value" data-index="2"></span>
                     </div>
                     <input type="range" min="000" max="500" value="000" step="10" class="slider" id="sad"
@@ -51,7 +67,7 @@
                 </div>
                 <div class="control">
                     <div class="slider-info">
-                        <p id="form-name">怒り</p>
+                        <p id="form-name">Angry<span>怒り</span></p>
                         <span class="value" data-index="3"></span>
                     </div>
                     <input type="range" min="000" max="500" value="000" step="10" class="slider" id="angry"
@@ -59,7 +75,7 @@
                 </div>
                 <div class="control">
                     <div class="slider-info">
-                        <p id="form-name">驚き</p>
+                        <p id="form-name">Surprise<span>驚き</span></p>
                         <span class="value" data-index="4"></span>
                     </div>
                     <input type="range" min="000" max="500" value="000" step="10" class="slider" id="surprise"
@@ -67,7 +83,7 @@
                 </div>
                 <div class="control">
                     <div class="slider-info">
-                        <p id="form-name">嫌悪</p>
+                        <p id="form-name">Disgust<span>嫌悪</span></p>
                         <span class="value" data-index="5"></span>
                     </div>
                     <input type="range" min="000" max="500" value="000" step="10" class="slider" id="disgust"
@@ -75,17 +91,17 @@
                 </div>
                 <div class="control">
                     <div class="slider-info">
-                        <p id="form-name">恐怖</p>
+                        <p id="form-name">Fear<span>恐怖</span></p>
                         <span class="value" data-index="6"></span>
                     </div>
                     <input type="range" min="000" max="500" value="000" step="10" class="slider" id="fear"
                         data-index="6">
                 </div>
             </div>
+
             <div>
                 <p>SIL Open Font License 1.1</p>
-                <p><a href="https://github.com/juuunnnk/VariEmoji"
-                        target="_blank">https://github.com/juuunnnk/VariEmoji</a></p>
+                <p><a href="https://github.com/juuunnnk/VariEmoji" target="_blank">Github</a></p>
             </div>
         </div>
     </div>
