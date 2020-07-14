@@ -77,10 +77,11 @@ h1 {
     margin-bottom: 40px;
     font-size: 20px;
     font-weight: bold;
+
 }
 
 .share-box a {
-    color: #000;
+    color: #777777;
     margin-left: 5px;
 }
 
@@ -153,6 +154,15 @@ h1 {
     color: #e6c81e;
 }
 
+
+.info {
+    color: #777777;
+}
+
+.info a{
+    color: #777777;
+}
+
 @media screen and (max-width:640px) {
     input[type="range"] {
 
@@ -173,6 +183,14 @@ h1 {
 
     .desq p {
         font-size: 16px;
+    }
+    .share-box {
+        font-size: 18px;
+    }
+
+    .color p {
+        font-size: 16px;
+        margin-bottom: 24px;;
     }
 
     .container {
