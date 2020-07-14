@@ -40,9 +40,9 @@ let url = new URL(window.location);
 function loadParam() {
     const urlParam = url.searchParams
     // 色の設定
-    if (urlParam.has(`emcolor`)) {
-        let emValue = urlParam.get(`emcolor`);
-        let bgValue = urlParam.get(`bgcolor`);
+    if (urlParam.has(`em`)) {
+        let emValue = urlParam.get(`em`);
+        let bgValue = urlParam.get(`bg`);
         let emcValue = decodeURIComponent(emValue);
         let bgcValue = decodeURIComponent(bgValue);
         emoji.style.color = emcValue;
@@ -87,8 +87,8 @@ function resetParam() {
     sliders.forEach(function (emotion) {
         url.searchParams.delete(emotion.id);
     })
-    url.searchParams.delete("emcolor");
-    url.searchParams.delete("bgcolor");
+    url.searchParams.delete("em");
+    url.searchParams.delete("bg");
     return url.href
 }
 
@@ -103,8 +103,8 @@ function shareClick() {
     }
     let ecValue = emocolor.value;
     let bgValue = bgcolor.value;
-    url.searchParams.append("emcolor", ecValue);
-    url.searchParams.append("bgcolor", bgValue);
+    url.searchParams.append("em", ecValue);
+    url.searchParams.append("bg", bgValue);
     return url.href;
 }
 
