@@ -115,7 +115,7 @@ const liBtn = document.getElementById('line');
 
 twBtn.onclick = function () {
     var shareURL = shareClick();
-    var twHref = 'https://twitter.com/share?text=' + encodeURIComponent("いまの表情") + '&url=' + encodeURIComponent(shareURL) + '&hashtags=' + encodeURIComponent("variemoji");
+    var twHref = 'https://twitter.com/share?text=' + encodeURIComponent("いまの表情\n") + '&url=' + encodeURIComponent(shareURL) + '&hashtags=' + encodeURIComponent("variemoji");
     this.href = twHref;
 }
 
