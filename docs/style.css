@@ -69,6 +69,7 @@ h1 {
     margin-bottom: 40px;
 
 }
+
 .share-box {
     display: flex;
     justify-content: space-between;
@@ -77,6 +78,7 @@ h1 {
     font-size: 20px;
     font-weight: bold;
 }
+
 .share-box a {
     color: #000;
     margin-left: 5px;
@@ -117,7 +119,7 @@ h1 {
 #form-name span {
     font-size: 16px;
     margin-left: 5px;
-    color: #777777;;
+    color: #777777;
 }
 
 .slider-info {
@@ -160,7 +162,7 @@ h1 {
         border-radius: 20px;
         border: solid 3px #dff1ff;
     }
-    
+
     .control {
         margin-bottom: 20px;
     }
@@ -196,5 +198,9 @@ h1 {
     .slider-info {
         font-size: 16px;
         margin-bottom: 5px;
+    }
+
+    #form-name span {
+        font-size: 14px;
     }
 }
