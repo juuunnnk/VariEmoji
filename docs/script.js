@@ -139,7 +139,7 @@ const liBtn = document.getElementById('line');
 
 twBtn.onclick = function () {
     var shareURL = shareClick();
-    var twHref = 'https://twitter.com/share?text=' + encodeURIComponent("いまの表情\n") + '&url=' + encodeURIComponent(shareURL) + '&hashtags=' + encodeURIComponent("variemoji");
+    var twHref = 'https://twitter.com/share?text=' + encodeURIComponent("今の表情を絵文字にすると\n") + '&url=' + encodeURIComponent(shareURL) + '&hashtags=' + encodeURIComponent("variemoji");
     this.href = twHref;
 }
 
@@ -151,6 +151,6 @@ fbBtn.onclick = function () {
 
 liBtn.onclick = function () {
     var shareURL = shareClick();
-    var liHref = 'https://line.me/R/msg/text/?' + encodeURIComponent("いまの表情") + ' ' + encodeURIComponent(shareURL);;
+    var liHref = 'https://line.me/R/msg/text/?' + encodeURIComponent("今の表情を絵文字にすると") + ' ' + encodeURIComponent(shareURL);;
     this.href = liHref;
 }
