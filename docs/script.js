@@ -3,6 +3,7 @@ const emobg = document.getElementById('box-emoji');
 const emocolor = document.getElementById('emocolor');
 const bgcolor = document.getElementById('bgcolor');
 const reset = document.getElementById('resetBtn')
+const rdm = document.getElementById('rdmBtn');
 const emoKeycolor = "#e6c81e";
 const bgKeycolor = "#8f8f8f"
 
@@ -47,7 +48,7 @@ function loadParam() {
         let bgcValue = decodeURIComponent(bgValue);
         emoji.style.color = emcValue;
         emobg.style.backgroundColor = bgcValue;
-        emocolor.value = emcValue
+        emocolor.value = emcValue;
         bgcolor.value = bgcValue;
     }
     if (urlParam.has(`joy`)) {
@@ -64,8 +65,31 @@ function loadParam() {
 
 window.onload = loadParam();
 
+function rdmColor() {
+    let r = ('0' + Math.floor(Math.random() * 255).toString(16)).slice(-2);
+    let g = ('0' + Math.floor(Math.random() * 255).toString(16)).slice(-2);
+    let b = ('0' + Math.floor(Math.random() * 255).toString(16)).slice(-2);
+    let color = '#' + r + g + b;
+    return color;
+}
 
+rdm.onclick = function () {
+    let rdmemColor = rdmColor();
+    let rdmbgColor = rdmColor();
+    emoji.style.color = rdmemColor;
+    emobg.style.backgroundColor = rdmbgColor;
+    emocolor.value = rdmemColor;
+    bgcolor.value = rdmbgColor;
 
+    sliders.forEach(function (emotion) {
+        const sliderIndex = emotion.getAttribute("data-index");
+        const output = document.querySelector(`.value[data-index="${sliderIndex}"]`);
+        let rdmValue = 40 * Math.floor(10 * Math.random()) + 10 * Math.floor(10 * Math.random());
+        emoji.style.setProperty(`--${emotion.id}`, rdmValue);
+        output.innerHTML = rdmValue * 2 / 100;
+        emotion.value = rdmValue;
+    })
+}
 
 reset.onclick = function () {
     resetParam();

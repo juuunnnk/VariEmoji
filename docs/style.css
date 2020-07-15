@@ -90,8 +90,8 @@ h1 {
     flex-wrap: wrap;
     margin-bottom: 40px;
 }
-
-#resetBtn {
+.buttons button{
+    margin-right: 16px;
     font-size: 20px;
 }
 
