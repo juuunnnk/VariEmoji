@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo2 | VariEmoji</title>
+    <meta name="description" content="感情にあわせて自由に表情を作れる絵文字">
+    <meta property="og:title" content="VariEmoji" />
+    <meta property="og:description" content="感情にあわせて自由に表情を作れる絵文字" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@juuunnnk" />
+    <meta property="og:image" content="https://juuunnnk.github.io/VariEmoji/images/og.png"" />
+    <link rel=" icon" href="./images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="./images/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <style>
+        @font-face {
+            font-family: "variemoji";
+            src: url(font/variemojiGX.woff2) format("woff2-variations");
+        }
+
+        body {
+            height: 100%;
+            background-color: #e9e9e9;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        #box-emoji {
+            color: #4faaff;
+            font-family: variemoji;
+            font-size: 20vw;
+            text-align: center;
+        }
+
+        #area-emoji {
+            position: absolute;
+            width: 70%;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            -webkit-transform: translateY(-50%) translateX(-50%);
+        }
+
+
+        #emoji {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        span {
+            margin: 0 2vw;
+        }
+
+        #emoji1 {
+            color: #4faaff;
+            animation: joy 1.6s ease-in-out -0.2s infinite alternate;
+        }
+
+        #emoji2 {
+            color: #d6c315;
+            animation: sad 1.6s ease-in-out -0.4s infinite alternate;
+        }
+
+        #emoji3 {
+            color: #ff724f;
+            animation: angry 1.6s ease-in-out -0.6s infinite alternate;
+        }
+
+        #emoji4 {
+            color: #17c025;
+            animation: surprise 1.6s ease-in-out -0.8s infinite alternate;
+        }
+
+        #emoji5 {
+            color: #92a1af;
+            animation: disgust 1.6s ease-in-out -1s infinite alternate;
+        }
+
+        #emoji6 {
+            color: #ff4fbc;
+            animation: fear 1.6s ease-in-out -1.2s infinite alternate;
+        }
+
+        @keyframes joy {
+            0% {
+                font-variation-settings: 'JOYY'0, 'FEAR'400;
+            }
+
+            100% {
+                font-variation-settings: 'JOYY'900, 'FEAR'0;
+            }
+        }
+
+        @keyframes sad {
+            0% {
+                font-variation-settings: 'SADD'0, 'JOYY'400;
+            }
+
+            100% {
+                font-variation-settings: 'SADD'900, 'JOYY'0;
+            }
+        }
+
+        @keyframes angry {
+            0% {
+                font-variation-settings: 'ANGR'0, 'SADD'400;
+            }
+
+            100% {
+                font-variation-settings: 'ANGR'900, 'SADD'0;
+            }
+        }
+
+        @keyframes surprise {
+            0% {
+                font-variation-settings: 'SPRS'0, 'ANGR'400;
+            }
+
+            100% {
+                font-variation-settings: 'SPRS'900, 'ANGR'0;
+            }
+        }
+
+        @keyframes disgust {
+            0% {
+                font-variation-settings: 'DGST'0, 'SPRS'400;
+            }
+
+            100% {
+                font-variation-settings: 'DGST'900, 'SPRS'0;
+            }
+        }
+
+        @keyframes fear {
+            0% {
+                font-variation-settings: 'FEAR'0, 'DGST'400;
+            }
+
+            100% {
+                font-variation-settings: 'FEAR'900, 'DGST'0;
+            }
+        }
+
+        @media screen and (max-width:640px) {
+            #box-emoji {
+                font-size: 38vw;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box-emoji">
+        <div id="area-emoji">
+            <p id="emoji">
+                <span id="emoji1">😐</span>
+                <span id="emoji2">😐</span>
+                <span id="emoji3">😐</span>
+                <span id="emoji4">😐</span>
+                <span id="emoji5">😐</span>
+                <span id="emoji6">😐</span>
+            </p>
+        </div>
+    </div>
+    <script>
+
+    </script>
+</body>
+
+</html>

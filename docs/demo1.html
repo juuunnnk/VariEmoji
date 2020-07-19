@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo1 | VariEmoji</title>
+    <meta name="description" content="感情にあわせて自由に表情を作れる絵文字">
+    <meta property="og:title" content="VariEmoji" />
+    <meta property="og:description" content="感情にあわせて自由に表情を作れる絵文字" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@juuunnnk" />
+    <meta property="og:image" content="https://juuunnnk.github.io/VariEmoji/images/og.png"" />
+    <link rel=" icon" href="./images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="./images/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <style>
+        @font-face {
+            font-family: "variemoji";
+            src: url(font/variemojiGX.woff2) format("woff2-variations");
+        }
+
+        :root {
+            --joy: 0;
+        }
+
+        body {
+            background-color: #e9e9e9;
+        }
+
+        main {
+            width: 80%;
+            max-width: 480px;
+            margin: 0 auto;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #1d1d1d;
+        }
+
+        #box-emoji {
+            color: #4faaff;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            width: 80%;
+            margin: 0 auto 20px;
+        }
+
+        #output {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        #emoji {
+            font-family: variemoji;
+            font-size: 60px;
+            color: #4faaff;
+            font-variation-settings: 'JOYY'var(--joy);
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            cursor: pointer;
+            outline: none;
+            height: 10px;
+            width: 80%;
+            background: #ffffff;
+            border-radius: 20px;
+            border: solid 3px #dff1ff;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            background: #636363;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+        }
+
+        button {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div>
+            <h1>商品の使い心地はいかがでしたか？</h1>
+        </div>
+        <div id="box-emoji">
+            <p id="emoji">😐</p>
+            <p id="output">普通</p>
+        </div>
+        <div class="main">
+            <div class="control">
+                <div class="slider-info">
+                </div>
+                <input type="range" min="000" max="900" value="000" step="10" id="slider">
+            </div>
+            <button>送信</button>
+        </div>
+    </main>
+    <script>
+        const emoji = document.getElementById('emoji');
+        const output = document.getElementById('output');
+        const slider = document.getElementById('slider');
+        slider.oninput = function () {
+            let v = this.value
+            emoji.style.setProperty(`--joy`, v);
+            if (300 <= v && v < 600) {
+                output.innerHTML = "いいね";
+            } else if (600 <= v && v <= 900) {
+                output.innerHTML = "最高！";
+            } else {
+                output.innerHTML = "普通";
+            }
+        };
+    </script>
+</body>
+
+</html>
