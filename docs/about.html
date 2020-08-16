@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | VariEmoji</title>
+    <meta name="description" content="感情にあわせて自由に表情を作れる絵文字">
+    <meta property="og:title" content="About | VariEmoji" />
+    <meta property="og:description" content="感情にあわせて自由に表情を作れる絵文字" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@juuunnnk" />
+    <meta property="og:image" content="https://juuunnnk.github.io/VariEmoji/images/og.png"" />
+    <link rel=" icon" href="./images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="./images/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: "variemoji";
+            src: url(font/variemojiGX.woff2) format("woff2-variations");
+        }
+
+        ul {
+            padding: 0;
+            margin-left: 8%;
+            line-height: 1.5;
+        }
+
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #e9e9e9;
+        }
+
+        main {
+            color: #202020;
+            line-height: 2.0;
+            width: 80%;
+            max-width: 640px;
+            margin: 0 auto;
+            margin-top: 40px;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #1d1d1d;
+        }
+
+        main div {
+            font-size: 18px;
+            font-weight: 700;
+            ;
+        }
+
+        .emoji {
+            font-family: variemoji;
+            color: #d3d009;
+            vertical-align: -5%;
+            font-variation-settings: 'JOYY'900;
+        }
+
+        .et {
+            font-size: 64px;
+            vertical-align: -15%;
+        }
+
+        .emoji_1 {
+            font-size: 72px;
+            animation: joy 3.4s ease-in-out -0.2s infinite alternate;
+        }
+
+        .emoji_2 {
+            font-variation-settings: 'JOYY'900, 'ANGR'300;
+            color: #e9661b;
+        }
+
+        .emoji_3 {
+            font-variation-settings: 'SPRS'400, 'FEAR'200;
+            color: #4296e4;
+        }
+
+        .emoji_4 {
+            font-variation-settings: 'DGST'400, 'JOYY'400;
+            color: #d3287e;
+        }
+
+        .emoji_5 {
+            font-size: 32px;
+            vertical-align: -10%;
+        }
+
+
+
+        @keyframes joy {
+            0% {
+                font-variation-settings: 'JOYY'0, 'FEAR'400, 'SPRS'100;
+            }
+
+            50% {
+                font-variation-settings: 'JOYY'0, 'FEAR'400, 'SPRS'400;
+                color: #4296e4;
+            }
+
+            100% {
+                color: #e9661b;
+                font-variation-settings: 'JOYY'900, 'FEAR'0, 'SPRS'100;
+            }
+        }
+
+
+        @media screen and (max-width:640px) {
+            main div {
+                font-size: 14px;
+            }
+
+            .et {
+                font-size: 28px;
+                vertical-align: -10%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>About <span class="emoji emoji_1">😐</span></h1>
+        <div>
+            <p>
+                絵文字は現代の言語の表現方法としてごく当たり前に浸透しています。<br>
+                <br>
+                私たちが教科書で学んできた言語表現は、絵文字が組み合わさることで様々な印象に変えることができます。<br>
+                <br>
+                例えば「ハックした🥱」と「ハックした🥺」では、ハックに向き合った姿勢が違って読め、<br>
+                <br>
+                「社会に影響をおよぼす😡」と「社会に影響をおよぼす🤩」では、与える影響が悪影響なのか好影響なのか違って読めます。<br>
+                <br>
+                データとしては１文字の違いですが、この１文字の絵文字があらわす表情の違いで、コミュニケーションの印象は無数に変わることができます。かなり効率のいい文字形式だと思います。<br>
+                <br>
+                現在、世界的に使われている絵文字はおよそ3200種類ほどになります。これは広辞苑に乗っている言語数の25万語に比べると遥かに少ないです。<br>
+                VariEmojiは、絵文字の感情をパラメータで操作することでコミュニケーションにあわせた自由な絵文字を作れるようにするプロジェクトです。<br>
+                <br>
+                ポール・エクマン氏の「基本的な感情リスト」にもとづく6つの感情、喜び、悲しみ、怒り、恐怖、驚き、嫌悪を操作して、無表情の絵文字 "😐" を無数の表情に変化させることができます。<br>
+                <br>
+                これによって、これまで見た目から選ぶことしかできなかった絵文字を、感情を基準に使えるようになります。<br>
+                <br>
+                例えば、<br>
+                <ul>
+                    <li>笑っているが少し怒ってる表情 <span class="emoji et emoji_2">😐</span></li>
+                    <li>驚きと恐怖が合わさった表情 <span class="emoji et emoji_3">😐</span></li>
+                    <li>嫌な気持ちもあるが少し嬉しい表情 <span class="emoji et emoji_4">😐</span></li>
+                </ul>
+                といったように、これまでの絵文字だけではできなかった複雑な表情をユーザーの意図にそって使用できるようになります。<br>
+                <br>
+                VariEmojiを実装することで、世界のコミュニケーションをより多様的に楽しく変化できればと考えています <span class="emoji emoji_5">😐</span><br>
+            </p>
+        </div>
+    </main>
+
+</body>
+
+</html>
